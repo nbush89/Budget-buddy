@@ -1,0 +1,33 @@
+header {
+  display: flex;
+  align-items: flex-start;
+  background-image: url("moneytrees.jpg");
+  background-position: center;
+  background-size: cover;
+  padding: 80px 0px;
+  margin: 0px;
+}
+.title {
+  margin: 50px;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  display: flex;
+  flex-direction: column;
+  margin: 0px;
+}
+
+#budget-form {
+  display: flex;
+  flex-direction: column;
+  font-size: 20px;
+  font-weight: bold;
+  padding: 10px;
+}
+
+#expense-form {
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+}
