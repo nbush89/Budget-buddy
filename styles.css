@@ -1,14 +1,19 @@
 header {
   display: flex;
-  align-items: flex-start;
+  align-items: normal;
   background-image: url("moneytrees.jpg");
   background-position: center;
   background-size: cover;
-  padding: 80px 0px;
+  padding: 200px;
   margin: 0px;
+  position: relative;
 }
+
 .title {
-  margin: 50px;
+  position: absolute;
+  top: 0px;
+  left: 16px;
+  padding: 20px;
 }
 
 body {
@@ -16,6 +21,9 @@ body {
   display: flex;
   flex-direction: column;
   margin: 0px;
+    /* background-color: #E2F2A7; */
+   /* background-color:#E8FFBD; */
+   background-color: #F0F2B3;
 }
 
 #budget-form {
@@ -24,10 +32,205 @@ body {
   font-size: 20px;
   font-weight: bold;
   padding: 10px;
+  width: 100%;
 }
+
+/* label{
+   padding: 5px;
+   border-radius: 10px;
+ }  */
 
 #expense-form {
   display: flex;
   flex-direction: column;
+  font-size: 16px;
+  font-weight: bold;
   padding: 10px;
+  width: 100%;
+  border-radius: 10px;
+}
+
+input[type="text"] {
+  width: auto;
+  padding: 10px;
+  margin: 10px;
+  /* background-color: #fff; */
+  /* border-color: #fff; */
+  border-radius: 5px;
+  /* display: inline-block;
+  box-sizing: border-box; */
+}
+
+button {
+  width: 100%;
+  padding: 10px;
+  /* background-color: #3F633D; */
+  /* background-color: #5F9C52; */
+  font-size: 16px;
+  font-weight: bold;
+  background-color:#8FC96B;
+  border-radius: 10px;
+  box-sizing: border-box;
+  margin: 20px 0px 0px 0px;
+  justify-content: center;
+  align-items: center;
+}
+
+#type {
+  width: 100%;
+  padding: 10px;
+  background-color: #fff;
+  border-radius: 10px;
+  box-sizing: border-box;
+  margin: 20px 0px 0px 0px;
+  justify-content: center;
+  align-items: center;
+}
+
+.total-expenses {
+  padding: 10px;
+}
+
+.food-expense {
+  font-size: 20px;
+  position: absolute;
+  padding: 10px;
+  margin: 5px;
+  transform: translate(5%, -50%);
+}
+
+#circle1 {
+  height: 10px;
+  width: 10px;
+  block-size: 10px;
+  padding: 3px;
+  margin: 10px;
+  background-color: red;
+  border-radius: 50%;
+  align-content: baseline-position;
+  vertical-align: text-top;
+}
+
+.bills-expense {
+  font-size: 20px;
+  position: absolute;
+  padding: 10px;
+  margin: 5px;
+  transform: translate(5%, -50%);
+}
+
+#circle2 {
+  height: 10px;
+  width: 10px;
+  block-size: 10px;
+  padding: 3px;
+  margin: 10px;
+  background-color: blue;
+  border-radius: 50%;
+  align-content: baseline-position;
+  vertical-align: text-top;
+}
+.entertainment-expense {
+  font-size: 20px;
+  position: absolute;
+  padding: 10px;
+  margin: 5px;
+  transform: translate(4%,-50%);
+}
+
+#circle3 {
+  height: 10px;
+  width: 10px;
+  block-size: 10px;
+  padding: 3px;
+  margin: 10px;
+  background-color: purple;
+  border-radius: 50%;
+  align-content: baseline-position;
+  vertical-align: text-top;
+}
+
+.clothing-expense {
+  font-size: 20px;
+  position: absolute;
+  padding: 10px;
+  margin: 5px;
+  transform: translate(5%, -50%);
+}
+
+#circle4 {
+  height: 10px;
+  width: 10px;
+  block-size: 10px;
+  padding: 3px;
+  margin: 10px;
+  background-color: yellow;
+  border-radius: 50%;
+  align-content: baseline-position;
+  vertical-align: text-top;
+}
+
+.misc-expense {
+  font-size: 20px;
+  position: absolute;
+  padding: 10px;
+  margin: 5px;
+  transform: translate(5%, -50%);
+}
+
+#circle5 {
+  height: 10px;
+  width: 10px;
+  block-size: 10px;
+  padding:3px;
+  margin: 10px;
+  background-color: green;
+  border-radius: 50%;
+  align-content: baseline-position;
+  vertical-align: text-top;
+}
+
+/* desktop view */
+@media only screen and (min-width: 768px) {
+  header {
+    display: flex;
+    align-items: normal;
+    background-image: url("moneytrees2.jpg");
+    background-position: center;
+    background-size: cover;
+    padding: 300px; 
+    
+    position: relative;
+  }
+
+#budget-form {
+  display: flex;
+  flex-direction: row;
+  font-size: 20px;
+  font-weight: bold;
+  padding: 10px;
+  width: auto;
+} 
+
+#expense-form {
+  display: flex;
+  flex-direction: row;
+  padding: 10px;
+  width: auto; 
+}
+
+button {
+  width: auto;
+  /* padding: 10px;
+  /* background-color: #3F633D; */
+  /* background-color: #5F9C52; */
+  /* font-size: 16px;
+  font-weight: bold;
+  background-color:#8FC96B;
+  border-radius: 10px;
+  box-sizing: border-box;
+  margin: 20px 0px 0px 0px; 
+  justify-content: center;
+  align-items: center; */
+}
 }

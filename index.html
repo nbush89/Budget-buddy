@@ -11,14 +11,17 @@
     />
     <title>Weekly Budget</title>
   </head>
-  <header><h1 class="title">Budget Buddy</h1></header>
+
+  <header>
+    <h1 class="title">Budget Buddy</h1>
+  </header>
 
   <body>
     <h1 class="remaining"></h1>
     <form id="budget-form">
       <label for="budget">Enter your weekly budget:</label>
       <input type="text" name="budget" id="budget" />
-      <button>Submit</button>
+      <button type="submit">Submit</button>
     </form>
     <form id="expense-form">
       <label for="expense-description">Expense description:</label>
@@ -40,11 +43,21 @@
     </form>
     <div class="total-expenses">
       <h2>Total Expenses:</h2>
-      <p class="food-expense">Food Expenses: $0.00</p>
-      <p class="bills-expense">Bill Expenses: $0.00</p>
-      <p class="entertainment-expense">Entertainment Expenses: $0.00</p>
-      <p class="clothing-expense">Clothing Expenses: $0.00</p>
-      <p class="misc-expense">Miscellaneous Expenses: $0.00</p>
+      <section id="circle1">
+        <p class="food-expense">Food Expenses: $0.00</p>
+      </section>
+      <section id="circle2">
+        <p class="bills-expense">Bill Expenses: $0.00</p>
+      </section>
+      <section id="circle3">
+        <p class="entertainment-expense">Entertainment Expenses: $0.00</p>
+      </section>
+      <section id="circle4">
+        <p class="clothing-expense">Clothing Expenses: $0.00</p>
+      </section>
+      <section id="circle5">
+        <p class="misc-expense">Miscellaneous Expenses: $0.00</p>
+      </section>
     </div>
     <script src="script.js"></script>
   </body>
