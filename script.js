@@ -90,6 +90,31 @@ function displayExpenses() {
   budgetLeft.innerText = `Budget Remaining: $${Number.parseFloat(
     budget.budget
   ).toFixed(2)}`;
+  budget.expenses.forEach(expense => {
+    if (expense.type === "food") {
+      let foodItem = document.createElement("p");
+      foodItem.innerText = `${expense.description}: $${expense.amount}`;
+      document.querySelector("#food-receipt").append(foodItem);
+    } else if (expense.type === "bills") {
+      let billsItem = document.createElement("p");
+      billsItem.innerText = `${expense.description}: $${expense.amount}`;
+      document.querySelector("#bills-receipt").append(billsItem);
+    } else if (expense.type === "entertainment") {
+      let entertainmentItem = document.createElement("p");
+      entertainmentItem.innerText = `${expense.description}: $${expense.amount}`;
+      document
+        .querySelector("#entertainment-receipt")
+        .append(entertainmentItem);
+    } else if (expense.type === "clothing") {
+      let clothingItem = document.createElement("p");
+      clothingItem.innerText = `${expense.description}: $${expense.amount}`;
+      document.querySelector("#clothing-receipt").append(clothingItem);
+    } else {
+      let miscItem = document.createElement("p");
+      miscItem.innerText = `${expense.description}: $${expense.amount}`;
+      document.querySelector("#misc-receipt").append(miscItem);
+    }
+  });
   if (budget.budget < 0) {
     alert("You are over budget for the week!");
   }
@@ -107,4 +132,19 @@ form.addEventListener("submit", e => {
   );
   form.reset();
   displayExpenses();
+});
+
+let receiptDisplay = document.querySelector(".total-expenses");
+receiptDisplay.addEventListener("click", e => {
+  if (e.target.className === "fas fa-receipt food") {
+    document.querySelector("#food-receipt").classList.toggle("show");
+  } else if (e.target.className === "fas fa-receipt bills") {
+    document.querySelector("#bills-receipt").classList.toggle("show");
+  } else if (e.target.className === "fas fa-receipt entertainment") {
+    document.querySelector("#entertainment-receipt").classList.toggle("show");
+  } else if (e.target.className === "fas fa-receipt clothing") {
+    document.querySelector("#clothing-receipt").classList.toggle("show");
+  } else if (e.target.className === "fas fa-receipt misc") {
+    document.querySelector("#misc-receipt").classList.toggle("show");
+  }
 });

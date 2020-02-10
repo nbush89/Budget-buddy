@@ -18,51 +18,61 @@
 
   <body>
     <div class="budget-container">
-    <h1 class="remaining"></h1>
-    <form id="budget-form">
-      <label for="budget">Enter your weekly budget:</label>
-      <input type="text" name="budget" id="budget" />
-      <button type="submit" id="submit">Submit</button>
-    </form>
-  </div>
+      <h1 class="remaining"></h1>
+      <form id="budget-form">
+        <label for="budget">Enter your weekly budget:</label>
+        <input type="text" name="budget" id="budget" />
+        <button type="submit" id="submit">Submit</button>
+      </form>
+    </div>
 
     <div class="expense-container">
-    <form id="expense-form">
-      <label for="expense-description">Expense description:</label>
-      <input type="text" name="expense" id="expense-description" />
-      <label for="expense-amount">Expense Amount:</label>
-      <input type="text" name="expense-amount" id="expense-amount" />
-      <label for="type">Expense Type</label>
-      <select name="type" id="type">
-        <option value="">Choose an expense</option>
-        <option class="food" value="food">Food</option>
-        <option class="bills" value="bills">Bills</option>
-        <option class="entertainment" value="entertainment">Entertainment</option>
-        <option class="clothing" value="clothing">Clothing</option>
-        <option class="misc" value="misc">Misc</option>
-      </select>
-      <button type="submit" id="add">Add</button>
-    </form>
+      <form id="expense-form">
+        <label for="expense-description">Expense description:</label>
+        <input type="text" name="expense" id="expense-description" />
+        <label for="expense-amount">Expense Amount:</label>
+        <input type="text" name="expense-amount" id="expense-amount" />
+        <label for="type">Expense Type</label>
+        <select name="type" id="type">
+          <option value="">Choose an expense</option>
+          <option class="food" value="food">Food</option>
+          <option class="bills" value="bills">Bills</option>
+          <option class="entertainment" value="entertainment"
+            >Entertainment</option
+          >
+          <option class="clothing" value="clothing">Clothing</option>
+          <option class="misc" value="misc">Misc</option>
+        </select>
+        <button type="submit" id="add">Add</button>
+      </form>
 
-    <div class="total-expenses">
-      <h2>Total Expenses:</h2>
-      <section id="circle1">
-        <p class="food-expense">Food Expenses: $0.00</p>
-      </section>
-      <section id="circle2">
-        <p class="bills-expense">Bill Expenses: $0.00</p>
-      </section>
-      <section id="circle3">
-        <p class="entertainment-expense">Entertainment Expenses: $0.00</p>
-      </section>
-      <section id="circle4">
-        <p class="clothing-expense">Clothing Expenses: $0.00</p>
-      </section>
-      <section id="circle5">
-        <p class="misc-expense">Miscellaneous Expenses: $0.00</p>
-      </section>
+      <div class="total-expenses">
+        <h2>Total Expenses:</h2>
+        <section id="circle1"></section>
+        <div class="container">
+          <p class="food-expense">Food Expenses: $0.00</p>
+          <i class="fas fa-receipt food"></i>
+        </div>
+        <div id="food-receipt"></div>
+
+        <section id="circle2">
+          <p class="bills-expense">Bill Expenses: $0.00</p>
+        </section>
+        <section id="circle3">
+          <p class="entertainment-expense">Entertainment Expenses: $0.00</p>
+        </section>
+        <section id="circle4">
+          <p class="clothing-expense">Clothing Expenses: $0.00</p>
+        </section>
+        <section id="circle5">
+          <p class="misc-expense">Miscellaneous Expenses: $0.00</p>
+        </section>
+      </div>
     </div>
-  </div>
+    <script
+      src="https://kit.fontawesome.com/8e689803fb.js"
+      crossorigin="anonymous"
+    ></script>
     <script src="script.js"></script>
   </body>
 </html>

@@ -36,11 +36,6 @@ body {
   width: 100%;
 }
 
-/* label{
-   padding: 5px;
-   border-radius: 10px;
- }  */
-
 #expense-form {
   display: flex;
   flex-direction: column;
@@ -190,6 +185,21 @@ button {
   align-content: baseline-position;
   vertical-align: text-top;
 }
+.fas {
+  margin: 10px;
+  color: #0a7b83;
+}
+.container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+#food-receipt {
+  display: none;
+}
+.show {
+  display: block !important;
+}
 
 /* desktop view */
 @media only screen and (min-width: 768px) {
@@ -214,7 +224,7 @@ button {
     display: flex;
     flex-direction: row;
     margin-left: 20px;
-    }
+  }
 
   .total-expenses {
     display: flex;
@@ -256,7 +266,7 @@ button {
 
   button[id="add"] {
     margin: 10px 0px 0px 0px;
-    }
+  }
 
   button {
     width: auto;
