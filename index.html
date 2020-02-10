@@ -12,40 +12,70 @@
     <title>Weekly Budget</title>
   </head>
   <header><h1 class="title">Budget Buddy</h1></header>
-
   <body>
     <h1 class="remaining"></h1>
     <form id="budget-form">
       <label for="budget">Enter your weekly budget:</label>
       <input type="text" name="budget" id="budget" />
-      <button>Submit</button>
+      <button type="submit" id="submit">Submit</button>
     </form>
-    <form id="expense-form">
-      <label for="expense-description">Expense description:</label>
-      <input type="text" name="expense" id="expense-description" />
-      <label for="expense-amount">Expense Amount:</label>
-      <input type="text" name="expense-amount" id="expense-amount" />
-      <label for="type">Expense Type</label>
-      <select name="type" id="type">
-        <option value="">Choose an expense</option>
-        <option class="food" value="food">Food</option>
-        <option class="bills" value="bills">Bills</option>
-        <option class="entertainment" value="entertainment"
-          >Entertainment</option
-        >
-        <option class="clothing" value="clothing">Clothing</option>
-        <option class="misc" value="misc">Misc</option>
-      </select>
-      <button type="submit">Add</button>
-    </form>
-    <div class="total-expenses">
-      <h2>Total Expenses:</h2>
-      <p class="food-expense">Food Expenses: $0.00</p>
-      <p class="bills-expense">Bill Expenses: $0.00</p>
-      <p class="entertainment-expense">Entertainment Expenses: $0.00</p>
-      <p class="clothing-expense">Clothing Expenses: $0.00</p>
-      <p class="misc-expense">Miscellaneous Expenses: $0.00</p>
+    <div class="expense-container">
+      <form id="expense-form">
+        <label for="expense-description">Expense description:</label>
+        <input type="text" name="expense" id="expense-description" />
+        <label for="expense-amount">Expense Amount:</label>
+        <input type="text" name="expense-amount" id="expense-amount" />
+        <label for="type">Expense Type</label>
+        <select name="type" id="type">
+          <option value="">Choose an expense</option>
+          <option class="food" value="food">Food</option>
+          <option class="bills" value="bills">Bills</option>
+          <option class="entertainment" value="entertainment"
+            >Entertainment</option
+          >
+          <option class="clothing" value="clothing">Clothing</option>
+          <option class="misc" value="misc">Misc</option>
+        </select>
+        <button type="submit" id="add">Add</button>
+      </form>
+      <div class="total-expenses">
+        <h2>Total Expenses:</h2>
+        <div class="container">
+          <section id="circle1"></section>
+          <p class="food-expense">Food Expenses: $0.00</p>
+          <i class="fas fa-receipt food"></i>
+        </div>
+        <div id="food-receipt"></div>
+        <div class="container">
+          <section id="circle2"></section>
+          <p class="bills-expense">Bill Expenses: $0.00</p>
+          <i class="fas fa-receipt bills"></i>
+        </div>
+        <div id="bills-receipt"></div>
+        <div class="container">
+          <section id="circle3"></section>
+          <p class="entertainment-expense">Entertainment Expenses: $0.00</p>
+          <i class="fas fa-receipt entertainment"></i>
+        </div>
+        <div id="entertainment-receipt"></div>
+        <div class="container">
+          <section id="circle4"></section>
+          <p class="clothing-expense">Clothing Expenses: $0.00</p>
+          <i class="fas fa-receipt clothing"></i>
+        </div>
+        <div id="clothing-receipt"></div>
+        <div class="container">
+          <section id="circle5"></section>
+          <p class="misc-expense">Miscellaneous Expenses: $0.00</p>
+          <i class="fas fa-receipt misc"></i>
+        </div>
+        <div id="misc-receipt"></div>
+      </div>
     </div>
+    <script
+      src="https://kit.fontawesome.com/8e689803fb.js"
+      crossorigin="anonymous"
+    ></script>
     <script src="script.js"></script>
   </body>
 </html>

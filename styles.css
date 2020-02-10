@@ -4,30 +4,237 @@ header {
   background-image: url("moneytrees.jpg");
   background-position: center;
   background-size: cover;
-  padding: 80px 0px;
+  padding: 20px 0px;
   margin: 0px;
+  height: 250px;
 }
 .title {
-  margin: 50px;
+  margin-left: 20px;
+  margin-top: 20px;
+  color: rgb(32, 160, 100);
+  font-size: 60px;
+  font-weight: 900;
+  font-style: italic;
 }
 
 body {
-  font-family: "Poppins", sans-serif;
+  font-family: "Roboto", sans-serif;
   display: flex;
   flex-direction: column;
   margin: 0px;
 }
-
+.remaining {
+  margin: 20px 10px;
+}
 #budget-form {
   display: flex;
   flex-direction: column;
-  font-size: 20px;
+  font-size: 30px;
   font-weight: bold;
   padding: 10px;
+}
+label {
+  margin: 7px 0px;
+}
+input {
+  padding: 5px;
+  border-radius: 5px;
+  box-shadow: none;
+}
+button {
+  color: black;
+  font-weight: 500;
+  margin: 10px 0px;
+  padding: 5px;
+  background-color: #8fc96b;
+  opacity: 0.8;
+  border-radius: 5px;
+  font-size: 14px;
+}
+select {
+  padding: 20px;
+  font-size: 16px;
 }
 
 #expense-form {
   display: flex;
   flex-direction: column;
   padding: 10px;
+}
+#circle1 {
+  height: 10px;
+  width: 10px;
+  block-size: 10px;
+  padding: 3px;
+  margin: 10px;
+  background-color: red;
+  border-radius: 50%;
+  align-content: baseline-position;
+  vertical-align: text-top;
+}
+#circle2 {
+  height: 10px;
+  width: 10px;
+  block-size: 10px;
+  padding: 3px;
+  margin: 10px;
+  background-color: blue;
+  border-radius: 50%;
+  align-content: baseline-position;
+  vertical-align: text-top;
+}
+#circle3 {
+  height: 10px;
+  width: 10px;
+  block-size: 10px;
+  padding: 3px;
+  margin: 10px;
+  background-color: purple;
+  border-radius: 50%;
+  align-content: baseline-position;
+  vertical-align: text-top;
+}
+#circle4 {
+  height: 10px;
+  width: 10px;
+  block-size: 10px;
+  padding: 3px;
+  margin: 10px;
+  background-color: yellow;
+  border-radius: 50%;
+  align-content: baseline-position;
+  vertical-align: text-top;
+}
+#circle5 {
+  height: 10px;
+  width: 10px;
+  block-size: 10px;
+  padding: 3px;
+  margin: 10px;
+  background-color: green;
+  border-radius: 50%;
+  align-content: baseline-position;
+  vertical-align: text-top;
+}
+.total-expenses {
+  padding: 0px 10px;
+}
+h2 {
+  font-size: 30px;
+  text-decoration: underline;
+}
+p {
+  font-size: 20px;
+  font-weight: 0;
+  margin: 10px;
+}
+.fas {
+  margin: 10px;
+  color: #0a7b83;
+}
+.container {
+  display: flex;
+  align-items: center;
+}
+#food-receipt {
+  display: none;
+}
+#bills-receipt {
+  display: none;
+}
+#entertainment-receipt {
+  display: none;
+}
+#clothing-receipt {
+  display: none;
+}
+#misc-receipt {
+  display: none;
+}
+.show {
+  display: block !important;
+}
+@media only screen and (min-width: 768px) {
+  header {
+    display: flex;
+    align-items: normal;
+    background-color: #8fc96b;
+    background-image: none;
+    height: 100px;
+  }
+  .title {
+    color: white;
+    font-style: italic;
+  }
+
+  .budget-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: baseline;
+    margin-left: 10px;
+  }
+  .expense-container {
+    display: flex;
+    flex-direction: row;
+    margin-left: 20px;
+  }
+  h2 {
+    margin-top: 0;
+  }
+  .total-expenses {
+    display: flex;
+    flex-direction: column;
+    margin-left: 60px;
+    padding: 10px;
+  }
+
+  #budget-form {
+    display: flex;
+    flex-direction: row;
+    font-size: 20px;
+    font-weight: bold;
+    padding: 10px;
+    width: auto;
+  }
+
+  #expense-form {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    padding: 10px;
+    width: 45%;
+  }
+
+  input[name="budget"] {
+    width: auto;
+    padding: 10px;
+    margin: 0px 10px 0px 10px;
+    border-radius: 5px;
+  }
+
+  button[id="submit"] {
+    width: 125px;
+    padding: 10px;
+    margin: 0px 10px 0px 10px;
+    border-radius: 5px;
+  }
+
+  button[id="add"] {
+    margin: 20px 0px;
+  }
+
+  button {
+    width: auto;
+    font-weight: bold;
+    background-color: #8fc96b;
+    border-radius: 10px;
+    box-sizing: border-box;
+    margin: 0px 0px 0px 0px;
+    justify-content: center;
+    align-items: center;
+  }
+  input {
+    margin: 10px 0px;
+  }
 }

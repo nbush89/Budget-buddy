@@ -63,18 +63,6 @@ budgetForm.addEventListener("submit", e => {
   budgetForm.reset();
   displayExpenses();
 });
-
-// let budget = new Budget(400);
-// budget.addExpense("meal", 10, "food");
-// budget.addExpense("mcdonalds", 5, "food");
-// budget.addExpense("gas", 20, "misc");
-// budget.addExpense("cable", 56.78, "bills");
-// budget.addExpense("DTE", 67.45, "bills");
-// budget.addExpense("H&M", 78.36, "clothing");
-// budget.addExpense("concert", 60, "entertainment");
-// console.log(budget);
-// console.log(budget);
-
 function displayExpenses() {
   let foodExpense = document.querySelector(".food-expense");
   foodExpense.innerText = `Food Expenses: $${budget.food}`;
@@ -90,6 +78,34 @@ function displayExpenses() {
   budgetLeft.innerText = `Budget Remaining: $${Number.parseFloat(
     budget.budget
   ).toFixed(2)}`;
+
+  // console.log(budget.expenses);
+
+  budget.expenses.forEach(expense => {
+    if (expense.type === "food") {
+      let foodItem = document.createElement("p");
+      foodItem.innerText = `${expense.description}: $${expense.amount}`;
+      document.querySelector("#food-receipt").append(foodItem);
+    } else if (expense.type === "bills") {
+      let billsItem = document.createElement("p");
+      billsItem.innerText = `${expense.description}: $${expense.amount}`;
+      document.querySelector("#bills-receipt").append(billsItem);
+    } else if (expense.type === "entertainment") {
+      let entertainmentItem = document.createElement("p");
+      entertainmentItem.innerText = `${expense.description}: $${expense.amount}`;
+      document
+        .querySelector("#entertainment-receipt")
+        .append(entertainmentItem);
+    } else if (expense.type === "clothing") {
+      let clothingItem = document.createElement("p");
+      clothingItem.innerText = `${expense.description}: $${expense.amount}`;
+      document.querySelector("#clothing-receipt").append(clothingItem);
+    } else {
+      let miscItem = document.createElement("p");
+      miscItem.innerText = `${expense.description}: $${expense.amount}`;
+      document.querySelector("#misc-receipt").append(miscItem);
+    }
+  });
   if (budget.budget < 0) {
     alert("You are over budget for the week!");
   }
@@ -99,12 +115,32 @@ let form = document.querySelector("#expense-form");
 
 form.addEventListener("submit", e => {
   e.preventDefault();
+  document.querySelector("#food-receipt").innerHTML = "";
+  document.querySelector("#bills-receipt").innerHTML = "";
+  document.querySelector("#entertainment-receipt").innerHTML = "";
+  document.querySelector("#clothing-receipt").innerHTML = "";
+  document.querySelector("#misc-receipt").innerHTML = "";
   const formData = new FormData(form);
   budget.addExpense(
-    formData.get("expense-description"),
+    formData.get("expense"),
     formData.get("expense-amount"),
     formData.get("type")
   );
   form.reset();
   displayExpenses();
+});
+
+let receiptDisplay = document.querySelector(".total-expenses");
+receiptDisplay.addEventListener("click", e => {
+  if (e.target.className === "fas fa-receipt food") {
+    document.querySelector("#food-receipt").classList.toggle("show");
+  } else if (e.target.className === "fas fa-receipt bills") {
+    document.querySelector("#bills-receipt").classList.toggle("show");
+  } else if (e.target.className === "fas fa-receipt entertainment") {
+    document.querySelector("#entertainment-receipt").classList.toggle("show");
+  } else if (e.target.className === "fas fa-receipt clothing") {
+    document.querySelector("#clothing-receipt").classList.toggle("show");
+  } else if (e.target.className === "fas fa-receipt misc") {
+    document.querySelector("#misc-receipt").classList.toggle("show");
+  }
 });
