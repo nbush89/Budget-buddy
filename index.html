@@ -17,12 +17,16 @@
   </header>
 
   <body>
+    <div class="budget-container">
     <h1 class="remaining"></h1>
     <form id="budget-form">
       <label for="budget">Enter your weekly budget:</label>
       <input type="text" name="budget" id="budget" />
-      <button type="submit">Submit</button>
+      <button type="submit" id="submit">Submit</button>
     </form>
+  </div>
+
+    <div class="expense-container">
     <form id="expense-form">
       <label for="expense-description">Expense description:</label>
       <input type="text" name="expense" id="expense-description" />
@@ -33,14 +37,13 @@
         <option value="">Choose an expense</option>
         <option class="food" value="food">Food</option>
         <option class="bills" value="bills">Bills</option>
-        <option class="entertainment" value="entertainment"
-          >Entertainment</option
-        >
+        <option class="entertainment" value="entertainment">Entertainment</option>
         <option class="clothing" value="clothing">Clothing</option>
         <option class="misc" value="misc">Misc</option>
       </select>
-      <button type="submit">Add</button>
+      <button type="submit" id="add">Add</button>
     </form>
+
     <div class="total-expenses">
       <h2>Total Expenses:</h2>
       <section id="circle1">
@@ -59,6 +62,7 @@
         <p class="misc-expense">Miscellaneous Expenses: $0.00</p>
       </section>
     </div>
+  </div>
     <script src="script.js"></script>
   </body>
 </html>
