@@ -78,9 +78,6 @@ function displayExpenses() {
   budgetLeft.innerText = `Budget Remaining: $${Number.parseFloat(
     budget.budget
   ).toFixed(2)}`;
-
-  // console.log(budget.expenses);
-
   budget.expenses.forEach(expense => {
     if (expense.type === "food") {
       let foodItem = document.createElement("p");

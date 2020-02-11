@@ -1,3 +1,10 @@
 {
+<<<<<<< HEAD
     "liveServer.settings.port": 5506
+=======
+    "liveServer.settings.port": 5501,
+    "cSpell.words": [
+        "moneytrees"
+    ]
+>>>>>>> 7fd94a61f25fabfe4e227ed957b6728b607481de
 }
