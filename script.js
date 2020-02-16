@@ -75,9 +75,9 @@ function displayExpenses() {
   let miscExpense = document.querySelector(".misc-expense");
   miscExpense.innerText = `Miscellaneous Expenses: $${budget.misc}`;
   let budgetLeft = document.querySelector(".remaining");
-  budgetLeft.innerText = `Budget Remaining: $${Number.parseFloat(
-    budget.budget
-  ).toFixed(2)}`;
+  budgetLeft.innerText = `Budget Remaining: $${Number(
+    parseFloat(budget.budget).toFixed(2)
+  )}`;
   budget.expenses.forEach(expense => {
     if (expense.type === "food") {
       let foodItem = document.createElement("p");
