@@ -8,6 +8,8 @@ class Budget {
     this.misc = 0;
     this.expenses = [];
   }
+  //Updated budget is subtracting new value plus previous value
+
   addExpense(description, amount, type) {
     if (type === "food") {
       this.food += Number(amount);
@@ -76,8 +78,8 @@ function displayExpenses() {
   miscExpense.innerText = `Miscellaneous Expenses: $${budget.misc}`;
   let budgetLeft = document.querySelector(".remaining");
   budgetLeft.innerText = `Budget Remaining: $${Number(
-    parseFloat(budget.budget).toFixed(2)
-  )}`;
+    parseFloat(budget.budget)
+  ).toFixed(2)}`;
   budget.expenses.forEach(expense => {
     if (expense.type === "food") {
       let foodItem = document.createElement("p");
